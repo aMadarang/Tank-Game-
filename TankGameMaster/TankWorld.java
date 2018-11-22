@@ -23,12 +23,13 @@ public class TankWorld extends JApplet implements Runnable{
     static Image[] wallExplosion = new Image[6];
     private BufferedImage bimg, windowS, p1Windows, p2Window;
     Graphics2D g2;
+
     int GameSize = 1535, GameHeight = 1408;  //boundary of GameSize
     int p1X, p1Y;   //player 1 window
     int p2X, p2Y;   //player 2 window
-    int time = 1, gameOverCounter = 30; //counters
+    int time = 1;
     static Tank player1, player2;
-    String winner, loser;
+
     public InputStream LoadMap ;
     private Dimension miniImage;
     int w = 1300, h = 800; // Fixed Size window
@@ -48,7 +49,6 @@ public class TankWorld extends JApplet implements Runnable{
 
         //load map
         LoadMap = this.getClass().getClassLoader().getResourceAsStream("TankGameMaster/Resources/map.txt");
-
         try{
 
             //set the background Image of game
@@ -56,7 +56,7 @@ public class TankWorld extends JApplet implements Runnable{
 
             //tank image
             tank1 = ImageIO.read(new File("C:\\Users\\TEMP\\Desktop\\csc413-tankgame-angelomadarang\\TankGameMaster\\Resources\\tank1.png"));
-            tank2 = ImageIO.read(new File("C:\\Users\\TEMP\\Desktop\\csc413-tankgame-angelomadarang\\TankGameMaster\\Resources\\tank2.png"));
+            tank2 = ImageIO.read(new File("C:\\Users\\TEMP\\Desktop\\csc413-tankgame-angelomadarang\\TankGameMaster\\Resources\\tank1.png"));
 
             //walls
             unBreakWall = ImageIO.read(new File("C:\\Users\\TEMP\\Desktop\\csc413-tankgame-angelomadarang\\TankGameMaster\\Resources\\redWall1.gif"));
@@ -101,15 +101,16 @@ public class TankWorld extends JApplet implements Runnable{
 
         //keyboard controls(left,Right,Forward,Backward,Shoot) and speed of tank
         player1 = new Tank(tank1, 95, 64, 5, KeyEvent.VK_A, KeyEvent.VK_D, KeyEvent.VK_W,KeyEvent.VK_S, KeyEvent.VK_SPACE);
-        player2 = new Tank(tank2, 1250, 1250, 5, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP,KeyEvent.VK_DOWN, KeyEvent.VK_ENTER);
+        player2 = new Tank(tank2, 1250, 1300, 5, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, KeyEvent.VK_UP,KeyEvent.VK_DOWN, KeyEvent.VK_ENTER);
         gameEvent = new GameEvents();
 
         gameEvent.addObserver(player1);
         gameEvent.addObserver(player2);
 
         KeyControl key = new KeyControl();
+        SoundPlayer.SoundPlayer( true, "TankGameMaster/Resources/recess intro 2.wav.wav");
+
         addKeyListener(key);
-        // sp = new SoundPlayer(1,"Resources/background.wav");
         MapLayout(); //load
 
         }
@@ -140,7 +141,7 @@ public class TankWorld extends JApplet implements Runnable{
     {
         return explosion;
     }
-    public Image[] getWallExplosions()
+    public Image[] getWallImageEx()
     {
         return wallExplosion;
     }
@@ -204,7 +205,7 @@ public class TankWorld extends JApplet implements Runnable{
         {
             for (int i = 0; i <= explosions.size() - 1; i++)
             {
-                if (explosions.get(i).isDone())
+                if (explosions.get(i).boom())
                 {
                     explosions.remove(i--);
                 }

@@ -32,7 +32,6 @@ public class bulletShot extends Bullet {
         {
             sTemp = false;
             TankWorld.player1.BuletDammage(DamageBullet);
-
         }
         else if(TankWorld.player2.collision(x, y, bulletX, bulletY) && sTemp && mainTank != TankWorld.player2 && !TankWorld.player2.Respawn())
         {
@@ -40,16 +39,17 @@ public class bulletShot extends Bullet {
             TankWorld.player2.BuletDammage(DamageBullet);
         }
 
-        else {
-            for(int i = 0; i < TankWorld.getTankWorld().getWall().size()-1; i++)
+        else
             {
-                Wall tempWall = TankWorld.getTankWorld().getWall().get(i);
-                if(tempWall.getWallRectangle().intersects(x, y, width/60, height)&&tempWall.respawnWall())
+                for(int i = 0; i < TankWorld.getTankWorld().getWall().size()-1; i++)
+            {
+                Wall bWall = TankWorld.getTankWorld().getWall().get(i);
+                if(bWall.wallGetRectangle().intersects(x, y, width/60, height)&&bWall.respawnWall())
                 {
-                    if(tempWall.isDestroyAble())
+                    if(bWall.isDestroyAble())
                     {
-                        tempWall.breakWall();
-                        addExplosion(TankWorld.getTankWorld().getWallExplosions(),tempWall.x,tempWall.y);
+                        bWall.breakWall();
+                        addExplosion(TankWorld.getTankWorld().getWallImageEx(),bWall.x,bWall.y);
                     }
                     sTemp=false;
                 }
@@ -57,7 +57,7 @@ public class bulletShot extends Bullet {
         }
         if(!sTemp)
         {
-            addExplosion(TankWorld.getTankWorld().getWallExplosions(),x,y);
+            addExplosion(TankWorld.getTankWorld().getWallImageEx(),x,y);
         }
     }
 

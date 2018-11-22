@@ -9,6 +9,20 @@ public class Wall extends GameObj{
 	private Rectangle shapeWall;
 	private int resfresh, width, height;
 
+
+
+	public Wall(Image img, int x, int y, boolean weakWall)
+	{
+		super(img, x, y, 0);
+		resfresh = 0;
+		breakableWall = weakWall;
+		this.width = img.getWidth(null);
+		this.height = img.getHeight(null);
+
+		explode=false;
+		shapeWall = new Rectangle(x,y,width,height);
+	}
+
 	public boolean respawnWall()
 	{
 		return resfresh == 0;
@@ -24,21 +38,9 @@ public class Wall extends GameObj{
 		resfresh = 500;
 	}
 
-	public Rectangle getWallRectangle()
+	public Rectangle wallGetRectangle()
 	{
 		return shapeWall;
-	}
-
-	public Wall(Image img, int x, int y, boolean weakWall)
-	{
-		super(img, x, y, 0);
-		resfresh = 0;
-		breakableWall = weakWall;
-		this.width = img.getWidth(null);
-		this.height = img.getHeight(null);
-
-		explode=false;
-		shapeWall = new Rectangle(x,y,width,height);
 	}
 
 	//draw wall

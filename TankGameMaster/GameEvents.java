@@ -8,7 +8,8 @@ public class GameEvents extends Observable {
 	public Object event;
 	int collision;
 
-	public void setValue(KeyEvent e) {
+	public void setValue(KeyEvent e)
+	{
 		type = 1; // let's assume this means key input.
 		// Should use CONSTANT value for this when you program
 		event = e;

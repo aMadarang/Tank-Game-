@@ -35,7 +35,8 @@ public abstract class GameObj implements Observer{
 	}
 
 	//collision check
-	 public boolean collision(int x, int y, int w, int h) {
+	 public boolean collision(int x, int y, int w, int h)
+	 {
 	        bbox = new Rectangle(this.x, this.y, this.width, this.height);
 	        Rectangle otherBBox = new Rectangle (x,y,w,h);
 	        if(this.bbox.intersects(otherBBox)&&!explode)

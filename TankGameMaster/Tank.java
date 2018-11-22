@@ -120,8 +120,8 @@ public class Tank extends GameObj {
     		if(--life>=0)
     			health = 4;
 				explode = false;
-    			x=respawnX;
-    			y=respawnY;
+    			x = respawnX;
+    			y = respawnY;
         }
         else
         	{
