@@ -129,7 +129,7 @@
     <session id="103174726">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
@@ -377,6 +377,16 @@
             <path>
               <item name="csc413-tankgame-angelomadarang" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc413-tankgame-angelomadarang" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc413-tankgame-angelomadarang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc413-tankgame-angelomadarang" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc413-tankgame-angelomadarang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc413-tankgame-angelomadarang" type="462c0819:PsiDirectoryNode" />
               <item name="TankGameMaster" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -390,8 +400,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542866152092" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542866164802" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -445,8 +455,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.TankWorld" />
       <item itemvalue="JAR Application.csc413-tankgame-angelomadarang.jar" />
+      <item itemvalue="Application.TankWorld" />
     </list>
     <recent_temporary>
       <list>
@@ -470,18 +480,17 @@
       <workItem from="1542429959760" duration="1033000" />
       <workItem from="1542431458053" duration="713000" />
       <workItem from="1542475972113" duration="6081000" />
-      <workItem from="1542845598344" duration="10334000" />
+      <workItem from="1542845598344" duration="10366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77459000" />
+    <option name="totallyTimeSpent" value="77491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -490,7 +499,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31453362" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33188722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39796954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
