@@ -4,7 +4,6 @@
 ## Date: 11/16/2018
 ## IDE used: Intellij IDEA
 ## JAVA: 10
-## Current Working Directory(root): csc413-tankgame-angelomadarang
 
 ## Game Exmaple
 <img src='' />
